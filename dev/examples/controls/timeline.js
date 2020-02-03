@@ -45,6 +45,12 @@ export const renderTimelineCustomContainerPadding = (id) => {
     );
 
     const data = utils.deepClone(getDemoData(`#${id}`, "TIMELINE"));
+    data.padding = {
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0
+    };
     const timelineDefault = Carbon.api.timeline(data);
     timelineDefault.loadContent(getDemoData(`#${id}`, "TIMELINE").data[0]);
     return timelineDefault;
