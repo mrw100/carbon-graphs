@@ -235,9 +235,10 @@ describe("Timeline", () => {
             input.content = null;
             data.tasks = [];
             const cfg = timeline.config;
-            const ticks = document.getElementsByClassName('tick');
-            const leftValue = ticks[0].getBoundingClientRect().width/2;
-            const rightValue = ticks[ticks.length-1].getBoundingClientRect().width/2;
+            const ticks = document.getElementsByClassName("tick");
+            const leftValue = ticks[0].getBoundingClientRect().width / 2;
+            const rightValue =
+                ticks[ticks.length - 1].getBoundingClientRect().width / 2;
             expect(input.bindTo).toBe("");
             expect(input.axis).toEqual({});
             expect(data.tasks).toEqual([]);
